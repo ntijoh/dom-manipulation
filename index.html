@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Övningar i DOM-manipulation</title>
+    
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        /* Du kan lägga till lite CSS-stilar här */
+    </style>
+</head>
+<body>
+    <h1>Övningar i DOM-manipulation. Skriv i js/main.js</h1>
+
+    <!-- Avsnitt 1: Klickhändelse -->
+    <section>
+        <h2>Klickhändelse</h2>
+        <button id="clickButton">Klicka på mig</button>
+        <p id="clickOutput">Klicka på knappen för att ändra denna text.</p>
+    </section>
+
+    <!-- Avsnitt 2: Mouseover-händelse -->
+    <section>
+        <h2>Mouseover-händelse</h2>
+        <div id="mouseoverDiv" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+        <p id="mouseoverOutput">Hovra över den blå rutan.</p>
+    </section>
+
+    <!-- Avsnitt 3: Formulärvalidering -->
+    <section>
+        <h2>Formulärvalidering</h2>
+        <form id="validationForm">
+            <label for="email">E-post:</label>
+            <input type="email"  id="email" name="email">
+            <span id="emailError" style="color: red;"></span>
+            <br>
+            <button type="submit">Skicka</button>
+        </form>
+    </section>
+
+    <!-- Avsnitt 4: Dynamisk lista -->
+    <section>
+        <h2>Dynamisk lista</h2>
+        <ul id="list">
+            <li>Post 1</li>
+            <li>Post 2</li>
+            <li>Post 3</li>
+        </ul>
+        <input type="text" id="listInput" placeholder="Ny post">
+        <button id="addItemButton">Lägg till post</button>
+    </section>
+
+    <!-- Avsnitt 5: Val av DOM-element -->
+    <section>
+        <h2>Val av DOM-element</h2>
+        <p id="selectParagraph">Detta är ett stycke som kan väljas.</p>
+        <ul>
+            <li class="selectListItem">Post 1</li>
+            <li class="selectListItem">Post 2</li>
+            <li class="selectListItem">Post 3</li>
+        </ul>
+        <div class="selectDiv" style="background-color: lightyellow;">Denna div kan väljas.</div>
+    </section>
+
+    <!-- Avsnitt 6: Ändra stilar -->
+    <section>
+        <h2>Ändra stilar</h2>
+        <button id="changeColorButton">Ändra färg</button>
+        <p id="colorChangeTarget">Klicka på knappen för att ändra färgen på denna text.</p>
+    </section>
+
+    <!-- Avsnitt 7: Lägga till och ta bort klasser -->
+    <section>
+        <h2>Lägga till och ta bort klasser</h2>
+        <p class="classDemo">Detta stycke kan få en klass tillagd eller borttagen.</p>
+        <button id="addClassButton">Lägg till klass</button>
+        <button id="removeClassButton">Ta bort klass</button>
+    </section>
+
+    <script>
+        // JavaScript-koden för eventlisteners och DOM-manipulation, exempel. 
+
+        // Avsnitt 5: Val av DOM-element
+        const selectParagraph = document.getElementById('selectParagraph');
+        const selectListItems = document.querySelectorAll('.selectListItem');
+        const selectDiv = document.querySelector('.selectDiv');
+
+        // Avsnitt 6: Ändra stilar
+        const colorChangeButton = document.getElementById('changeColorButton');
+        const colorChangeTarget = document.getElementById('colorChangeTarget');
+
+        // Avsnitt 7: Lägga till och ta bort klasser
+        const classDemoParagraph = document.querySelector('.classDemo');
+        const addClassButton = document.getElementById('addClassButton');
+        const removeClassButton = document.getElementById('removeClassButton');
+
+        // Lägg till händelselyssnare och manipuleringskod för varje avsnitt i main.js
+        // Du kan använda variablerna ovanför för att välja element och utföra åtgärder på dem.
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
